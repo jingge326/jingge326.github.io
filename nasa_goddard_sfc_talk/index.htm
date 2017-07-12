@@ -1,0 +1,607 @@
+<html>
+    <head><meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+
+        <link rel="stylesheet" href="css/reveal.css" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/css/theme/white.css">
+		
+		<!-- MathJax -->
+		<script type="text/javascript" async
+		  src="../../cdn.mathjax.org/mathjax/latest/MathJax.js-config=TeX-MML-AM_CHTML" tppabs="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		
+		<!-- Custom CSS -->
+        <style type="text/css">
+            #firstSlide p {color: white; width: 100%; }
+            #firstSlide h3 {color: white; width: 100%; }
+            #firstSlide h4 {color: white; width: 100%; }
+            /*image background filter*/
+            .backgrounds {
+                 -webkit-filter: contrast(70%);
+                 -webkit-filter: brightness(60%);
+            }
+
+            .profilePic {
+                display: inline-block;
+                margin-left: 5px;
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                border: 2px solid black;
+                background-size:cover;
+            }
+            .reveal section img {
+                border: none;
+                background: none;
+            }
+
+            .reveal .ref {
+                float: bottom;
+                width: 80%;
+                text-align: left;
+                font-size:40%;
+
+            }
+
+            .reveal .ref p {
+                margin: 5px;
+            }
+			
+			.reveal ol,
+			.reveal dl,
+			.reveal ul {
+			  display: inline-block;
+			  font-size: 0.55em; 
+			  text-align: left;
+			  margin: 0 0 0 1em; }
+        </style>
+
+    </head> 
+    <body>
+        <div class="reveal">
+
+            <!-- SLIDES -->
+            <div class="slides">
+                
+                <!-- Title -->
+                <section>
+                    <h2>Tropical Forest Monitoring Using Landsat Time Series and Community-based Data</h2>
+                    Ben DeVries
+                    <img data-src="img/cover.jpg" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/cover.jpg">
+                    <a href="../index.htm" tppabs="http://bendevries.ca/">http://bendevries.ca</a>
+                    <p>NASA Goddard Space Flight Center, May 12, 2016</p>
+                </section>
+
+                <!-- Co-authors, collaborators -->
+                <section>
+	                <h3>Co-authors, Collaborators, Project Partners, Thesis Students</h3>
+					<ul>
+	                <p>Jan Verbesselt, Lammert Kooistra, Martin Herold, Arun Kumar Pratihast, Mathieu Decuyper, Achim Zeileis, Shijo Joseph, Valerio Avitabile, Lo&iuml;c Dutrieux, Johannes Reiche, Niki De Sy, Brice Mora, Nandika Tsendbazar, Frehiwot Tessema, Dereje Beyene, Elias Gebremeskel, Kalkidan Mulatu, Svane Bender Kaphengst, Daniela Tunger, Bianca Schlegel, Mesfin Tekle, Muluken Mekuria, Kafa Zone Bureau of Agriculture</p>
+					</ul>
+                </section>
+
+                <!-- About me -->
+                <section>
+                    <h3>About me</h3>
+					<p>Born and raised in St. Thomas, ON, Canada</p>
+					<p>BSc: University of Toronto - 2005</p>
+					<p>MSc: Wageningen University - 2010</p>
+					<p>PhD (Remote Sensing): Wageningen University - 2015</p>
+					<img width=75% data-src="img/st_t.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/st_t.png">
+                </section>
+
+                <!-- My current project -->
+                <section>
+                    <h4>Towards Near Daily Monitoring of Inundated Areas Over North America Through Multi-Source Fusion of Optical and Radar Data</h4>
+					<p>Chengquan Huang (UMD), Megan Lang (FWS)</p>
+					<p>John Jones (USGS), Irena Creed (UWO)</p>
+					<a href="javascript:if(confirm('http://lcluc.umd.edu/projects/towards-near-daily-monitoring-inundated-areas-over-north-america-through-multi-source-2  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://lcluc.umd.edu/projects/towards-near-daily-monitoring-inundated-areas-over-north-america-through-multi-source-2'" tppabs="http://lcluc.umd.edu/projects/towards-near-daily-monitoring-inundated-areas-over-north-america-through-multi-source-2" target="_blank"><img data-src="img/LCLUC_Logo.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/LCLUC_Logo.png"></a>
+                </section>
+
+
+                <!-- My PhD research -->
+                <section>
+                	<h4>Monitoring tropical forest dynamics using Landsat time series and community-based data</h4>
+                	<a href="javascript:if(confirm('http://doi.org/10.13140/RG.2.1.2112.8409  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.13140/RG.2.1.2112.8409'" tppabs="http://doi.org/10.13140/RG.2.1.2112.8409" target="_blank"><img style="float: left" data-src="img/thesis_cover.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/thesis_cover.png"></a>
+                	<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;Promoter:</p>
+                	<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Martin Herold</p>
+                	<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;Co-supervisors:</p>
+                	<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jan Verbesselt</p>
+                	<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lammert Kooistra</p>
+                	<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;Available <a href="javascript:if(confirm('http://doi.org/10.13140/RG.2.1.2112.8409  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.13140/RG.2.1.2112.8409'" tppabs="http://doi.org/10.13140/RG.2.1.2112.8409" target="_blank">online</a></p>
+                </section>
+				
+				<!-- GRS/WUR -->
+				<section>
+					<img class="plain" width=50% data-src="img/GRS.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/GRS.png" style="float: left">
+					<ul style="float: right; width: 45%">
+					<h4>Wageningen University, The Netherlands</h4>
+					<p>Laboratory for Geo-Information Science and Remote Sensing (GRS)</p>
+					<p>Chairs: Prof. Martin Herold (RS) and Prof. Arnold Bregt (GIS)</p>
+					<p><a href="javascript:if(confirm('http://www.grs.wur.nl/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.grs.wur.nl/'" tppabs="http://www.grs.wur.nl/" target="_blank">http://www.grs.wur.nl</a></p>
+					<p>Research acitivities include:</p>
+					<p><a href="javascript:if(confirm('http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Environmental-Sciences/Laboratory-of-Geo-information-Science-and-Remote-Sensing/Research/Integrated-land-monitoring/Change_detection_and_monitoring.htm  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Environmental-Sciences/Laboratory-of-Geo-information-Science-and-Remote-Sensing/Research/Integrated-land-monitoring/Change_detection_and_monitoring.htm'" tppabs="http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Environmental-Sciences/Laboratory-of-Geo-information-Science-and-Remote-Sensing/Research/Integrated-land-monitoring/Change_detection_and_monitoring.htm" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;- Change Detection and Monitoring</a></p>
+					<p><a href="javascript:if(confirm('http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Environmental-Sciences/Laboratory-of-Geo-information-Science-and-Remote-Sensing/Research/Integrated-land-monitoring/Forest_Biomass.htm  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Environmental-Sciences/Laboratory-of-Geo-information-Science-and-Remote-Sensing/Research/Integrated-land-monitoring/Forest_Biomass.htm'" tppabs="http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Environmental-Sciences/Laboratory-of-Geo-information-Science-and-Remote-Sensing/Research/Integrated-land-monitoring/Forest_Biomass.htm" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;- Forest Biomass</a></p>
+					<p><a href="javascript:if(confirm('http://www.gofcgold.wur.nl/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.gofcgold.wur.nl/'" tppabs="http://www.gofcgold.wur.nl/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;- GOFC-GOLD</a></p>
+					</ul>
+				</section>
+
+                <!-- Outline -->
+                <section>
+                    <h3>Outline</h3>
+                    <p>Remarks on open data, tools and methods</p>
+					<p>Introduction to <code>bfast</code> and <code>bfastmonitor</code></p>
+                    <p>Monitoring small-scale disturbances: Kafa, Ethiopia</p>
+                    <p>Monitoring post-disturbance regrowth: Madre de Dios, Peru</p>
+                    <p>Integrating community-based monitoring data and LTS to characterize forest changes</p>
+                    <p>Conclusions</p>
+                </section>
+
+                <!-- ------------------ -->
+
+
+       
+       			<!-- LANDSAT -->
+				<section>
+				
+				<section>
+					<h3>Open data / methods</h3>
+				</section>
+				
+				<!-- Landsat intro -->
+                <section>
+					<img data-src="img/landsat_timeline.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/landsat_timeline.png">
+                	<ul>
+					<p>Landsat legacy represents longest continual space-borne observation record</p>
+					<p>Opening of the archive in 2008 - paradigm shift in change monitoring</p>
+					<p>Streamlining <a href="javascript:if(confirm('http://landsat.usgs.gov/landsat_level_1_standard_data_products.php  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://landsat.usgs.gov/landsat_level_1_standard_data_products.php'" tppabs="http://landsat.usgs.gov/landsat_level_1_standard_data_products.php" target="_blank">L1 data</a> generation (LEDAPS, FMASK, ...)</p>
+					<p>Bi-temporal (e.g. MAD, post-classification), Annual (e.g. LandTrendR, VCT), "All-available" (e.g. CCDC, bfastmonitor)</p>
+					</ul>
+                </section>
+				
+				
+				<!-- open methods, frameworks -->
+				<section>
+					<p>..."openness" not just limited to Landsat...</p>
+					<img class="plain" data-src="img/open_source.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/open_source.png">
+					<ul>
+					<p>How can these data and tools be leveraged to address current problems?</p>
+					<p>e.g. REDD+ MRV - transparency and reproducibility are key to maintaining credibility</p>
+					</ul>
+				</section>
+				
+				</section>
+				
+				<!-- BFAST -->
+				<section>
+				
+				<section>
+					<h3>BFAST / BFASTMONITOR</h3>
+				</section>
+			
+				
+				
+				<!-- bfast -->
+                <section>
+                	<h3>bfast</h3>
+                	<p></p>
+                	<img width=60% data-src="img/seasonalbreak_TreeMort.jpg" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/seasonalbreak_TreeMort.jpg" style="float: left">
+					<ul style="width: 35%; float: right"> 
+					<p>Breaks For Additive Season and Trend</p>
+					<p>Decomposition of time series into harmonic, trend and noise (residual) components</p>
+					<p>Segment a time series based on "most likely" breakpoints</p>
+					<p> e.g. - Detecting phenological change due to fire regimes in forests</p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2010.08.003  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2010.08.003'" tppabs="http://doi.org/10.1016/j.rse.2010.08.003" target="_blank">Verbesselt et al. (2010), Remote Sensing of Environment.</a></p>
+					</ul>
+                </section>
+				
+
+                <!-- bfastmonitor -->
+                <section>
+                	<h4>bfastmonitor</h4>
+                	<img width=55% data-src="img/bfastmonitor_animate.gif" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/bfastmonitor_animate.gif" style="float: left">
+					<ul style="width: 40%; float: right">
+					<p>Define a monitoring period and a history period</p>
+					<p>Fit model to observations history period</p>
+					<p>Check if "new" acquisitions in the monitoring period follow expected model based on hypothesis testing</p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2012.02.022  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2012.02.022'" tppabs="http://doi.org/10.1016/j.rse.2012.02.022" target="_blank">Verbesselt et al. (2012). Remote Sensing of Environment.</a></p>
+					</ul>
+                </section>
+
+
+                <!-- MOSUM -->
+                <section>
+					<h4>MOSUM</h4>
+					<img height=25% class="plain" data-src="img/MOSUM.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/MOSUM.png">
+					<ul>
+					<p>Breakpoints are determined by some measure of deviance from "expected" values</p>
+					<p>e.g. Cumulative Sums (CUSUM), or more localized Moving Sums (MOSUM) of residuals</p>
+					<p>Normalized by expected deviance (noise) in history data</p>
+					<p>Econometrics: measure of "structural change"</p>
+					<p>Chu et al. (1995), Biometrika. DOI:10.1093/biomet/82.3.603</p>
+					</ul>
+                </section>
+				</section>
+				<!-- ------------------ -->
+				
+				
+				
+
+				<!-- CHAPTER 2: Small-scale disturbances -->
+				<section>
+				
+				<!-- Introduction -->
+				<section>
+					<h2>Small-scale disturbances</h2>
+					<p>
+					<p>Application of <code>bfastmonitor</code> to dense Landsat time series</p>
+					<a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2015.02.012  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2015.02.012'" tppabs="http://doi.org/10.1016/j.rse.2015.02.012" target="_blank"><img height=50% data-src="img/ch2_RSE.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch2_RSE.png"></a>
+				</section>
+				
+				<!-- Study Area -->
+				<section>
+					<h3>Kafa Biosphere Reserve</br>Southwestern Ethiopia</h3>
+					<ul style="float: left; width: 30%">
+					<p>UNESCO Biosphere Reserve - inaugurated in 2011</p>
+					<p>Moist Afro-montane cloud forests</p>
+					<p>One of few remaining natural coffea arabica habitats</p>
+					<p>Forest conservation and restoration project by <a href="javascript:if(confirm('https://en.nabu.de/projects/ethiopia/kafa/biodiversity/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://en.nabu.de/projects/ethiopia/kafa/biodiversity/'" tppabs="https://en.nabu.de/projects/ethiopia/kafa/biodiversity/" target="_blank">NABU</a>, Germany</p>
+					<p>Participatory Forest Management (PFM) and Community-Based Monitoring (CBM)</p>
+					</ul>
+					<img class="plain" style="float: right" width=65% data-src="img/kafaBR.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/kafaBR.png">
+				</section>
+				
+				
+                <!-- small-scale def -->
+                <section>
+                	Small-scale changes can be captured by breakpoints
+                    <img class="plain" data-src="img/kafa_small_def.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/kafa_small_def.png">
+					<ul>
+					<p>Despite sparse time series, small-scale changes are mapped using breakpoints</p>
+					<p>Data gaps -- temporal uncertainty</p>
+					<p>Do all breakpoints signal disturbance? What about magnitude?</p>
+					</ul>
+                </section>
+
+                <!-- BFM Magnitude -->
+                <section>
+                	<p>Change magnitude (independent of breakpoint) measured as median of residuals in each 1-year interval</p>
+                    <img class="plain" data-src="img/kafa_magn_SPOT5.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/kafa_magn_SPOT5.png" height=500>
+                </section>
+
+                <!-- animation showing seqBFM -->
+                <section>
+					<p>Visualizing change dynamics using breakpoints and magnitude</p>
+					<img class="plain" data-src="img/tura_animate.gif" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/tura_animate.gif" style="float: left">
+					<img width=40% class="plain" data-src="img/tura_magn_legend.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/tura_magn_legend.png" style="float: left">
+                </section>
+				
+				<!-- OLR -->
+                <section>
+                    <img style="float: left" width=60% data-src="img/OLR.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/OLR.png">
+                    <ul style="width: 35%; float: right">
+                    <p>Calibration and validation based on visual interpretation of LTS data</p>
+                    <p>The best model for disturbances considers breakpoints and magnitude (median of residuals)</p>
+                    <p>Gaps still exist, especially for degradation</p>
+                    <p>Limitations include index, cal/val data (more on this later)</p>
+                    </ul>
+                </section>
+
+                <!-- map -->
+                <section>
+                	<img class="plain" data-src="img/kafa_dist_map.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/kafa_dist_map.png">
+                </section>
+				
+				
+				<!-- rgrowth -->
+				<section>
+					<h3><a href="javascript:if(confirm('http://github.com/dutri001/bfastSpatial  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/dutri001/bfastSpatial'" tppabs="http://github.com/dutri001/bfastSpatial" target="_blank"><code>bfastSpatial</code></a></h3>
+					<p>R package for pre-processing LTS and applying <code>bfastmonitor</code></p>
+				</section>
+
+				
+				</section>
+				<!-- -------------------------- -->
+				
+
+				
+
+				<!-- CHAPTER 3: Post-disturbance Regrowth -->
+				<section>
+				
+				<!-- Introduction -->
+				<section>
+					<h2>Post-disturbance Regrowth</h2>
+					<p>What happens after a disturbance?</p>
+					<ul>
+					<li>Permanent land use change (forest &#8594; cropland)</li>
+					<li>Secondary forest regrowth (forestry, shifting agriculture)</li>
+					</ul>
+					<p>How well can we track post-disturbance regrowth with LTS?</p>
+					<a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2015.08.020  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2015.08.020'" tppabs="http://doi.org/10.1016/j.rse.2015.08.020" target="_blank"><img height=50% data-src="img/ch3_RSE.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_RSE.png"></a>
+				</section>
+
+                <!-- Study Area -->
+                <section>
+					<h3>Madre de Dios, Peru</h3>
+					<img height=70% style="float: left" data-src="img/ch3_AOI.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_AOI.png">
+					<ul style="width: 50%; float: right">
+					<p>Southeastern Peru</p>
+					<p>Dense canopy forests</p>
+					<p>Recent infrastructure development leading to rapid changes to forests</p>
+					<p>Very dynamic: forest loss often followed by land abandonment, secondary regrowth</p>
+					<p>"Gold rush" within the last decade a major driver of forest change</p>
+					</ul>
+				</section>
+					
+				<!-- MOSUM revisited -->
+				<section>
+					MOSUM test for regrowth
+					<img data-src="img/ch3_h_values.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_h_values.png">
+					<ul>
+					<p>Recall: MOSUM is a measure of deviation from a "stable" history model</p>
+					<p>At and after a disturbance, the MOSUM become very large</p>
+					<p>Forest regrowth following a disturbance should bring the MOSUM back to near-zero conditions</p>
+					<p>Different MOSUM bandwidths (h) affect its sensitivity to this process</p>
+					</ul>
+                </section>
+
+				<!-- Added constraints -->
+				<section>
+					MOSUM test with added constraints
+					<img width=90% data-src="img/ch3_reg_monitoring_demo.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_reg_monitoring_demo.png">
+					<ul>
+					<p><strong>w</strong> - minimum time between disturbance (t<sub>B</sub>) and regrowth (t<sub>R</sub>)</p>
+					<p><strong>s</strong> - minimum time in which MOSUM < critical boundary</p>
+					</ul>
+				</section>
+
+				<!-- Full dist/reg map -->
+				<section>
+					<img class="plain" height=95% data-src="img/ch3_dist-reg.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_dist-reg.png">
+				</section>
+
+				<!-- regSpatial zoom -->
+				<section>
+					<img class="plain" height=95% data-src="img/ch3_reg_spatial_full.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_reg_spatial_full.png">
+				</section>
+
+				<!-- regPix zoom -->
+				<section>
+					<img height=95% data-src="img/ch3_reg_spatial_px.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch3_reg_spatial_px.png">
+				</section>
+				
+				<!-- rgrowth -->
+				<section>
+					<h3><a href="javascript:if(confirm('http://github.com/bendv/rgrowth  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/bendv/rgrowth'" tppabs="http://github.com/bendv/rgrowth" target="_blank"><code>rgrowth</code></a></h3>
+					<p>R package for monitoring regrowth with LTS</p>
+				</section>
+
+				</section>
+				<!-- ---------------------- -->
+
+
+
+
+				<!-- CHAPTER 4/5: CBM -->
+				<section>
+
+				
+                <!-- Intro to CBM -->
+				<section>
+					<h2>Integrated Monitoring:</h2>
+					<h3>LTS and CBM</h3>
+					<a href="javascript:if(confirm('http://doi.org/10.3390/f5102464  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.3390/f5102464'" tppabs="http://doi.org/10.3390/f5102464" target="_blank"><img class="plain" width=49% data-src="img/ch4_paper.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch4_paper.png" style="float: left"></a>
+					<a href="javascript:if(confirm('http://dx.doi.org/10.1371/journal.pone.0147121  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1371/journal.pone.0147121'" tppabs="http://dx.doi.org/10.1371/journal.pone.0147121" target="_blank"><img width=49% data-src="img/ch5_paper.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch5_paper.png" style="float: right"></a>
+				</section>
+				
+				<section>
+					<h2>Integrated Monitoring:</h2>
+					<h3>LTS and CBM</h3>
+					<ul>
+					<p>Community-Based Monitoring (CBM) is seen as a key component to REDD+ Measuring, Reporting and Verification (MRV) systems</p>
+					<p>Increased engagement, ownership, benefits-sharing</p>
+					<p>Some research has shown potential use of CBM data for monitoring purposes (e.g. AGB measurements), but research on utility of data is lacking</p>
+					</ul>
+				</section>
+				
+
+                <!-- ODK Framework -->
+                <section>
+                	<h4>ODK -- Open Data Kit</h4>
+                	<p>Simple smart-phone based tool for field data collection</p>
+                	<p>Exploits GPS, camera, and interactive features of smart phones to make data collection easy and convenient</p>
+                	<img class="plain" height=40% data-src="img/ODK.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ODK.png">
+                	<p><a href="javascript:if(confirm('http://opendatakit.org/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://opendatakit.org/'" tppabs="http://opendatakit.org/" target="_blank">http://opendatakit.org</a></p>
+                </section>
+				
+				<!-- KafaBR revisited -->
+                <section>
+					<h3>Kafa Biosphere Reserve (revisited)</h3>
+					<ul style="float: left; width: 30%">
+					<p>30 forest rangers recruited from 10 local districts by Kafa Zone Bureau of Agriculture</p>
+					<p>Reforestation, community plantations, community outreach, extension services, monitoring activities</p>
+					<p>After monitoring trainings (incl. ODK tools), >1500 geo-located forms returned</p>
+					<p>Prototype for local forest monitoring system - potential for nesting in national FMS</p>
+					</ul>
+					<img class="plain" style="float: right" width=65% data-src="img/kafaBR.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/kafaBR.png">
+                </section>
+				
+
+                <!-- Rangers and Phones -->
+                <section>
+					<img data-src="img/mobile_phone.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/mobile_phone.png" style="float: left" width=35% class="plain">
+					<img data-src="img/rangers1.jpg" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/rangers1.jpg" style="float: right" width=60%>
+                </section>
+
+				
+				<!-- Form attributes example -->
+				<section>
+					<img class="plain" data-src="img/ch4_plot_photos.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch4_plot_photos.png">
+					<ul>
+					<p>Various attributes describe landscape, changes (if any), drivers of change, etc.</p>
+					<p>Geo-location and photo evidence are essential for QA</p>
+					<p>Pratihast et al. (2014), Forests. DOI: <a href="javascript:if(confirm('http://www.mdpi.com/1999-4907/5/10/2464  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.mdpi.com/1999-4907/5/10/2464'" tppabs="http://www.mdpi.com/1999-4907/5/10/2464" target="_blank">10.3390/f5102464</a></p>
+					</ul>
+				</section>
+
+                <!-- BFAST time series example: deg -->
+                <section>
+					<img data-src="img/ch5_DEG_time_series.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch5_DEG_time_series.png">
+					<ul>
+					<p>Single robust linear model fit to entire time series</p>
+					<p><code>bfast</code> used determine presence/absence of breakpoint in time series</p>
+					<p>Temporal covariates derived for each spectral band and index:</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- trend (+delta), amplitude (+delta), overall trend, overall intercept</p>
+					</ul>
+                </section>
+
+                <!-- Improvement of predictions over time -->
+                <section>
+					<ul>
+					<p>Training (personnel) and data collection took place in phases</p>
+					<p>Do the predictions improve over time as monitoring continues?</p>
+					</ul>
+					<img data-src="img/ch5_iterative_updating.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch5_iterative_updating.png">
+                </section>
+				
+				<section>
+					<img width=67% data-src="img/ch5_defdegnoch_calval.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch5_defdegnoch_calval.png" style="float: left">
+					<ul style="width: 30%; float: right; text-align: left">
+					<p>Degradation often confused for no-change by model in the training phase</p>
+					<p>Improvement of degradation predictions in operational phase</p>
+					<p>Increase in number of training data as well as improved quality of data</p>
+					</ul>
+				</section>
+
+                <!-- Variable importance -->
+                <section>
+					<img data-src="img/ch5_RF_importance.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch5_RF_importance.png">
+					<ul>
+					<p>Band/Index-specific importance scores</p>
+					<p>Normalized ranks (compared class accuracies) over many model fits</p>
+					<p>SWIR[-derived] bands are essential</p>
+					</ul>
+                </section>
+
+                <!-- Maps -->
+                <section>
+					<img height=95% data-src="img/ch5_defdeg_maps.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/ch5_defdeg_maps.png">
+                </section>
+				
+				<!-- webGIS -->
+				<section>
+					<img data-src="img/webgis.png" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/webgis.png">
+					<a href="javascript:if(confirm('http://www.cbm.wur.nl/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.cbm.wur.nl/'" tppabs="http://www.cbm.wur.nl/" target="_blank">http://www.cbm.wur.nl</a>
+				</section>
+				
+				<!-- Conclusions -->
+				<section>
+					<p>Local experts acting as "in situ sensors"</p>
+					<p>Ground-based, a priori identification of subtle change can enhance forest monitoring using LTS</p>
+					<ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- e.g. understorey degradation precedes subtle changes to the canopy</p></ul>
+					<p>Continual capacity building can pay dividends in local forest monitoring systems</p>
+					<p>Drawbacks: how representative and sustainable are CBM data?</p>
+					<p>Data and Code <a href="javascript:if(confirm('http://github.com/bendv/integrated-lts-cbm  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/bendv/integrated-lts-cbm'" tppabs="http://github.com/bendv/integrated-lts-cbm" target="_blank">are available</a></p>
+				</section>
+				
+				
+				</section>
+				<!-- --------------------------- -->
+				
+				
+                <!-- conclusions -->
+                <section>
+                	<h3>Take home messages</h3>
+                	<p>Landsat time series is a very powerful tool</p>
+                	<ul style="text-align: left">
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- especially when all available data are used <a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2016.02.060  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2016.02.060'" tppabs="http://doi.org/10.1016/j.rse.2016.02.060" target="_blank">(Vogelman et al., 2016)</a></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Data fusion key to improving monitoring from space <a href="javascript:if(confirm('http://www.nature.com/nclimate/journal/v6/n2/full/nclimate2919.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.nature.com/nclimate/journal/v6/n2/full/nclimate2919.html'" tppabs="http://www.nature.com/nclimate/journal/v6/n2/full/nclimate2919.html" target="_blank">(Reiche et al., 2016)</a></p>
+					</ul>
+					<p>Change monitoring sometimes limited by arbitrary class definitions</p>
+                	<ul style="text-align: left">
+                	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- e.g. 'deforestation' versus 'degradation', 'regrowth' versus 'no regrowth'</p>
+                	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- consider more 'objective ecological' measures of forest condition and dynamics <a href="javascript:if(confirm('http://www.nature.com/nclimate/journal/v6/n2/abs/nclimate2816.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.nature.com/nclimate/journal/v6/n2/abs/nclimate2816.html'" tppabs="http://www.nature.com/nclimate/journal/v6/n2/abs/nclimate2816.html" target="_blank">(Sexton et al., 2016)</a></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- integration of LTS with in situ data/sensors can be of great help here</p>
+					</ul>
+					<p>Community-based monitoring is a potentially cost-saving measure in monitoring systems</p>
+
+                </section>
+
+				
+				<!-- Related tools -->
+				<section>
+					<h3>Some useful tools</h3>
+					<ul>
+					<p><code>bfast (/ bfastmonitor)</code> - <a href="javascript:if(confirm('http://bfast.r-forge.r-project.org/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://bfast.r-forge.r-project.org/'" tppabs="http://bfast.r-forge.r-project.org/" target="_blank">http://bfast.r-forge.r-project.org/</a></p>
+					<p><code>strucchange</code> - <a href="javascript:if(confirm('http://cran.r-project.org/web/packages/strucchange/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://cran.r-project.org/web/packages/strucchange/index.html'" tppabs="http://cran.r-project.org/web/packages/strucchange/index.html" target="_blank">http://cran.r-project.org/web/packages/strucchange/index.html</a></p>
+					<p><code>bfastSpatial</code> - <a href="javascript:if(confirm('http://github.com/dutri001/bfastSpatial  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/dutri001/bfastSpatial'" tppabs="http://github.com/dutri001/bfastSpatial" target="_blank">http://github.com/dutri001/bfastSpatial</a></p>
+					<p><code>timeSyncR</code> - <a href="javascript:if(confirm('http://github.com/bendv/timeSyncR  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/bendv/timeSyncR'" tppabs="http://github.com/bendv/timeSyncR" target="_blank">http://github.com/bendv/timeSyncR</a></p>
+					<p><code>rgrowth</code> - <a href="javascript:if(confirm('http://github.com/bendv/rgrowth  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/bendv/rgrowth'" tppabs="http://github.com/bendv/rgrowth" target="_blank">http://github.com/bendv/rgrowth</a></p>
+					<p><code>MulTiFuse</code> - <a href="javascript:if(confirm('http://github.com/jreiche/multifuse  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/jreiche/multifuse'" tppabs="http://github.com/jreiche/multifuse" target="_blank">http://github.com/jreiche/multifuse</a></p>
+					</ul>
+				</section>
+
+				
+				<!-- References -->
+				<section>
+					<h3>References</h3>
+					<ul style="text-align: left">
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1371/journal.pone.0147121  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1371/journal.pone.0147121'" tppabs="http://dx.doi.org/10.1371/journal.pone.0147121" target="_blank">DeVries, B., Pratihast, A.K., Verbesselt, J., Kooistra, L. & Herold, M. 2016. Characterizing forest change using community-based monitoring data and Landsat time series. PLoS ONE Forests, 11(3), e0147121.</a><p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2015.08.020  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2015.08.020'" tppabs="http://doi.org/10.1016/j.rse.2015.08.020" target="_blank">DeVries, B., M. Decuyper, J. Verbesselt, A. Zeileis, M. Herold & S. Joseph. 2015. Tracking disturbance-regrowth dynamics in the tropics using structural change detection and Landsat time series. Remote Sensing of Environment, 169, 320-334.</a></p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2015.02.012  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2015.02.012'" tppabs="http://doi.org/10.1016/j.rse.2015.02.012" target="_blank">DeVries, B., Verbesselt, J., Kooistra L. & Herold, M. 2015. Robust monitoring of small-scale forest disturbances in a tropical montane forest using Landsat time series. Remote Sensing of Environment, 161, 107-121.</a></p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.3390/f5102464  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.3390/f5102464'" tppabs="http://doi.org/10.3390/f5102464" target="_blank">Pratihast, A.K., DeVries, B., Avitabile, V., de Bruin, S., Kooistra, L. and Herold, M. 2014. Combining satellite data and community-based observations for forest monitoring. Forests, 5:2464-2489.</a></p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2012.02.022  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2012.02.022'" tppabs="http://doi.org/10.1016/j.rse.2012.02.022" target="_blank">Verbesselt, J., Zeileis, A., & Herold, M. (2012). Near real-time disturbance detection using satellite image time series. Remote Sensing of Environment, 123, 98-108.</a></p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1016/j.rse.2010.08.003  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1016/j.rse.2010.08.003'" tppabs="http://doi.org/10.1016/j.rse.2010.08.003" target="_blank">Verbesselt, J., Hyndman, R., Zeileis, A., & Culvenor, D. (2010). Phenological change detection while accounting for abrupt and gradual trends in satellite image time series. Remote Sensing of Environment, 114(12), 2970-2980.</a></p>
+					</ul>
+				</section>
+
+
+				<!-- Further Reading -->
+				<section>
+					<h3>Further Reading</h3>
+					<ul style="text-align: left">
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1016/j.rse.2015.11.006  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1016/j.rse.2015.11.006'" tppabs="http://dx.doi.org/10.1016/j.rse.2015.11.006" target="_blank">Hamunyela, E., Verbesselt, J., & Herold, M. 2016. Using spatial context to improve early detection of deforestation from Landsat time series. Remote Sensing of Environment, 172, 126-138.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.3390/rs70504973  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.3390/rs70504973'" tppabs="http://dx.doi.org/10.3390/rs70504973" target="_blank">Reiche, J., de Bruin, S.,  Hoekman, D.H., Verbesselt, J., & Herold, M. 2015. A Bayesian approach to combine Landsat and ALOS PALSAR time series for near real-time deforestation detection. Remote Sensing, 7, 4973-4996.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1016/j.rse.2014.10.001  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1016/j.rse.2014.10.001'" tppabs="http://dx.doi.org/10.1016/j.rse.2014.10.001" target="_blank">Reiche, J., Verbesselt, J., Hoekman, D.H., & Herold, M.. 2015. Fusing Landsat and SAR time series to detect deforestation in the tropics. Remote Sensing of Environment, 156, 276-293.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1109/JSTARS.2015.2477473  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1109/JSTARS.2015.2477473'" tppabs="http://dx.doi.org/10.1109/JSTARS.2015.2477473" target="_blank">Schultz, M., Verbesselt, J., Avitabile, V., & Herold, M. 2015. Error Sources in Deforestation Detection Using BFAST Monitor on Landsat Time Series Across Three Tropical Sites. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, PP(99), 1-14.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1016/j.isprsjprs.2015.03.015  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1016/j.isprsjprs.2015.03.015'" tppabs="http://dx.doi.org/10.1016/j.isprsjprs.2015.03.015" target="_blank">Dutrieux, L.P., Verbesselt, J., Kooistra, L., & Herold, M. 2015. Monitoring forest cover loss using multiple data streams, a case study of a tropical dry forest in Bolivia. ISPRS Journal of Photogrammetry and Remote Sensing, 107, 112-125.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.3390/s130100021  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.3390/s130100021'" tppabs="http://dx.doi.org/10.3390/s130100021" target="_blank">Pratihast, A.K., Herold, M., Avitabile, V., de Bruin, S., Bartholomeus, H., Souza, C.M., & Ribbe, L. 2013. Mobile Devices for Community-Based REDD+ Monitoring: A Case Study for Central Vietnam. Sensors, 13(1), 21-38.</a></p>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Even More Reading</h3>
+					<ul style="text-align: left">
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1016/j.jag.2015.11.018  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1016/j.jag.2015.11.018'" tppabs="http://dx.doi.org/10.1016/j.jag.2015.11.018" target="_blank">Dutrieux, L.P., Jakovac, C.C., Latifah, S.H., & Kooistra, L. 2016. Reconstructing land use history from Landsat time-series: Case study of a swidden agriculture system in Brazil. International Journal of Applied Earth Observation and Geoinformation, 47, 112-124.</a></p>
+					<p><a href="javascript:if(confirm('http://doi.org/10.1111/gcb.13139  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://doi.org/10.1111/gcb.13139'" tppabs="http://doi.org/10.1111/gcb.13139" target="_blank">Avitabile, V., Herold, M., Heuvelink, G. B. M., Lewis, S. L., Phillips, O. L., Asner, G. P., Armston, J., Ashton, P. S., Banin, L., Bayol, N., Berry, N. J., Boeckx, P., de Jong, B. H. J., DeVries, B., Girardin, C. A. J., Kearsley, E., Lindsell, J. A., Lopez-Gonzalez, G., Lucas, R., Malhi, Y., Morel, A., Mitchard, E. T. A., Nagy, L., Qie, L., Quinones, M. J., Ryan, C. M., Ferry, S. J. W., Sunderland, T., Laurin, G. V., Gatti, R. C., Valentini, R., Verbeeck, H., Wijaya, A. & Willcock, S. 2016. An integrated pan-tropical biomass map using multiple reference datasets. Global Change Biology, 22, 1406-1420.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1088/1748-9326/10/12/124004  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1088/1748-9326/10/12/124004'" tppabs="http://dx.doi.org/10.1088/1748-9326/10/12/124004" target="_blank">De Sy, V., Herold, M., Achard, F., Beuchle, R., Clevers, J.G.P.W., Lindquist, E., & Verchot, L. 2015. Land use patterns and related carbon losses following deforestation in South America. Environment Research Letters, 10, 124004.</a></p>
+					<p><a href="javascript:if(confirm('http://dx.doi.org/10.1016/j.cosust.2012.09.013  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://dx.doi.org/10.1016/j.cosust.2012.09.013'" tppabs="http://dx.doi.org/10.1016/j.cosust.2012.09.013" target="_blank">De Sy, V., Herold, M., Achard, F., Asner, G.P., Held, A., Kellndorfer, J., & Verbesselt, J. 2012. Synergies of multiple remote sensing data sources for REDD+ monitoring. Current Opinion in Environmental Sustainability, 4(6), 696-706.</a></p>
+				</ul>
+				</section>
+
+				
+				
+				<!-- Thanks! -->
+				<section>
+					<h1>Thank you!</h1>
+					<img data-src="img/me.JPG" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/img/me.JPG" height=25%>
+					<ul>
+					<p>LeFrak 2138</p>
+					<p>bdv@umd.edu</p>
+					<p><a href="../index.htm" tppabs="http://bendevries.ca/" target="_blank">bendevries.ca</a></p>
+					<p>Twitter: <a href="javascript:if(confirm('http://twitter.com/onchante  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://twitter.com/onchante'" tppabs="http://twitter.com/onchante" target="_blank">@onchante</a></p>
+					<p>Github: <a href="javascript:if(confirm('http://github.com/bendv  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://github.com/bendv'" tppabs="http://github.com/bendv" target="_blank">bendv</a></p>
+					<p><a href="javascript:if(confirm('https://www.researchgate.net/profile/Ben_DeVries  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www.researchgate.net/profile/Ben_DeVries'" tppabs="https://www.researchgate.net/profile/Ben_DeVries" target="_blank">ResearchGate</a></p>
+					</ul>
+				</section>
+				
+            </div>
+            <!--////////-->
+        
+        </div>
+        <script src="js/reveal.js" tppabs="http://bendevries.ca/nasa_goddard_sfc_talk/js/reveal.js"></script>
+        <script>
+            Reveal.initialize();
+        </script>
+    </body>
+</html>
